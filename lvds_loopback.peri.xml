@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<efxpt:design_db name="lvds_loopback" device_def="T120F324" location="/home/dj/original/VeggProjects/FPGA Examples/efinix_demos/LVDS-T120" version="2023.1.150" db_version="20231999" last_change_date="Fri Oct  6 16:56:06 2023" xmlns:efxpt="http://www.efinixinc.com/peri_design_db" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/peri_design_db peri_design_db.xsd ">
+    <efxpt:device_info>
+        <efxpt:iobank_info>
+            <efxpt:iobank name="1A" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="1B_1C" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="1D_1E_1F_1G" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="2D" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="2E" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="2F" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="3A" iostd="1.2 V"/>
+            <efxpt:iobank name="3B" iostd="1.2 V"/>
+            <efxpt:iobank name="3D_TR_BR" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="4E" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="4F" iostd="3.3 V LVTTL / LVCMOS"/>
+            <efxpt:iobank name="BL" iostd="1.2 V"/>
+            <efxpt:iobank name="TL" iostd="1.2 V"/>
+        </efxpt:iobank_info>
+        <efxpt:ctrl_info>
+            <efxpt:ctrl name="cfg" ctrl_def="CONFIG_CTRL0" clock_name="" is_clk_invert="false" cbsel_bus_name="cfg_CBSEL" config_ctrl_name="cfg_CONFIG" ena_capture_name="cfg_ENA" error_status_name="cfg_ERROR" um_signal_status_name="cfg_USR_STATUS" is_remote_update_enable="false" is_user_mode_enable="false"/>
+        </efxpt:ctrl_info>
+    </efxpt:device_info>
+    <efxpt:gpio_info device_def="T120F324">
+        <efxpt:gpio name="TxD" gpio_def="GPIOL_75" mode="output" bus_name="" is_lvds_gpio="false" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:output_config name="TxD" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" drive_strength="1"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[0]" gpio_def="GPIOT_RXP24" mode="output" bus_name="led" is_lvds_gpio="true" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:output_config name="led[0]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" drive_strength="1"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[1]" gpio_def="GPIOT_RXN24" mode="output" bus_name="led" is_lvds_gpio="true" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:output_config name="led[1]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" drive_strength="1"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[2]" gpio_def="GPIOT_RXP27" mode="output" bus_name="led" is_lvds_gpio="true" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:output_config name="led[2]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" drive_strength="1"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="led[3]" gpio_def="GPIOT_RXN27" mode="output" bus_name="led" is_lvds_gpio="true" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:output_config name="led[3]" name_ddio_lo="" register_option="none" clock_name="" is_clock_inverted="false" is_slew_rate="false" tied_option="none" ddio_type="none" drive_strength="1"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="rstn" gpio_def="GPIOT_RXP29" mode="input" bus_name="" is_lvds_gpio="true" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:input_config name="rstn" name_ddio_lo="" conn_type="normal" is_register="false" clock_name="" is_clock_inverted="false" pull_option="weak pullup" is_schmitt_trigger="false" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="tx_refclk" gpio_def="GPIOR_167" mode="input" bus_name="" is_lvds_gpio="false" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:input_config name="tx_refclk" name_ddio_lo="" conn_type="pll_clkin" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:gpio name="uart_clkref" gpio_def="GPIOR_188" mode="input" bus_name="" is_lvds_gpio="false" io_standard="3.3 V LVTTL / LVCMOS">
+            <efxpt:input_config name="uart_clkref" name_ddio_lo="" conn_type="pll_clkin" is_register="false" clock_name="" is_clock_inverted="false" pull_option="none" is_schmitt_trigger="false" ddio_type="none"/>
+        </efxpt:gpio>
+        <efxpt:global_unused_config state="input with weak pullup"/>
+        <efxpt:bus name="led" mode="output" msb="3" lsb="0"/>
+    </efxpt:gpio_info>
+    <efxpt:pll_info>
+        <efxpt:pll name="tx_pll" pll_def="PLL_TR1" ref_clock_name="" ref_clock_freq="20.0000" multiplier="25" pre_divider="2" post_divider="2" reset_name="txpll_rstn" locked_name="txpll_locked" is_ipfrz="false" is_bypass_lock="true">
+            <efxpt:output_clock name="tx_fastclk" number="0" out_divider="2" adv_out_phase_shift="90"/>
+            <efxpt:output_clock name="tx_slowclk" number="1" out_divider="8" adv_out_phase_shift="0"/>
+            <efxpt:adv_prop ref_clock_mode="external" ref_clock1_name="" ext_ref_clock_id="2" clksel_name="" feedback_clock_name="tx_fastclk" feedback_mode="core"/>
+        </efxpt:pll>
+        <efxpt:pll name="rx_pll" pll_def="PLL_TR0" ref_clock_name="" ref_clock_freq="62.5000" multiplier="2" pre_divider="2" post_divider="2" reset_name="rxpll_rstn" locked_name="rxpll_locked" is_ipfrz="false" is_bypass_lock="true">
+            <efxpt:output_clock name="rx_slowclk" number="0" out_divider="8" adv_out_phase_shift="0"/>
+            <efxpt:output_clock name="rx_fastclk" number="1" out_divider="2" adv_out_phase_shift="90"/>
+            <efxpt:adv_prop ref_clock_mode="external" ref_clock1_name="" ext_ref_clock_id="3" clksel_name="" feedback_clock_name="rx_slowclk" feedback_mode="core"/>
+        </efxpt:pll>
+        <efxpt:pll name="uart_pll" pll_def="PLL_BR2" ref_clock_name="" ref_clock_freq="10.0000" multiplier="80" pre_divider="1" post_divider="1" reset_name="" locked_name="" is_ipfrz="false" is_bypass_lock="true">
+            <efxpt:output_clock name="uart_clk" number="0" out_divider="8" adv_out_phase_shift="0"/>
+            <efxpt:adv_prop ref_clock_mode="external" ref_clock1_name="" ext_ref_clock_id="2" clksel_name="" feedback_clock_name="uart_clk" feedback_mode="internal"/>
+        </efxpt:pll>
+    </efxpt:pll_info>
+    <efxpt:lvds_info>
+        <efxpt:lvds name="lvds_refclk" lvds_def="GPIOT_RX09" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="" slow_clock_name="" in_bname="lvds_refclk_DATA" reset_name="" conn_type="pll_clkin" termination="true" serialization="1" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx1" lvds_def="GPIOT_RX01" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data1" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx11" lvds_def="GPIOT_RX11" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data11" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx12" lvds_def="GPIOT_RX12" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data12" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx13" lvds_def="GPIOT_RX13" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data13" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx14" lvds_def="GPIOT_RX14" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data14" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx15" lvds_def="GPIOT_RX15" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data15" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx16" lvds_def="GPIOT_RX16" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data16" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx17" lvds_def="GPIOT_RX17" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data17" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx18" lvds_def="GPIOT_RX18" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data18" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx19" lvds_def="GPIOT_RX19" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data19" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx2" lvds_def="GPIOT_RX02" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data2" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx20" lvds_def="GPIOT_RX20" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data20" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx21" lvds_def="GPIOT_RX21" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data21" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx3" lvds_def="GPIOT_RX03" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data3" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx4" lvds_def="GPIOT_RX04" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data4" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx5" lvds_def="GPIOT_RX05" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data5" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx6" lvds_def="GPIOT_RX06" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data6" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx7" lvds_def="GPIOT_RX07" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data7" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_rx8" lvds_def="GPIOT_RX08" ops_type="rx">
+            <efxpt:lrx_info pll_instance="" fast_clock_name="rx_fastclk" slow_clock_name="rx_slowclk" in_bname="rx_data8" reset_name="" conn_type="normal" termination="true" serialization="8" is_delay_ena="false" delay="0"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx0" lvds_def="GPIOB_TX00" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data0" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx1" lvds_def="GPIOB_TX01" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data1" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx10" lvds_def="GPIOB_TX10" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data10" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx11" lvds_def="GPIOB_TX11" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data11" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx12" lvds_def="GPIOB_TX12" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data12" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx13" lvds_def="GPIOB_TX13" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data13" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx14" lvds_def="GPIOB_TX14" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data14" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx15" lvds_def="GPIOB_TX15" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data15" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx16" lvds_def="GPIOB_TX16" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data16" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx17" lvds_def="GPIOB_TX17" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data17" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx18" lvds_def="GPIOB_TX18" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data18" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx19" lvds_def="GPIOB_TX19" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data19" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx2" lvds_def="GPIOB_TX02" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data2" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx3" lvds_def="GPIOB_TX03" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data3" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx4" lvds_def="GPIOB_TX04" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data4" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx5" lvds_def="GPIOB_TX05" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data5" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx6" lvds_def="GPIOB_TX06" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data6" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx7" lvds_def="GPIOB_TX07" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data7" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_tx8" lvds_def="GPIOB_TX08" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="prbs_data8" oe_name="" clock_div="1" mode="out" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+        <efxpt:lvds name="lvds_txclk" lvds_def="GPIOB_TX09" ops_type="tx">
+            <efxpt:ltx_info pll_instance="" fast_clock_name="tx_fastclk" slow_clock_name="tx_slowclk" reset_name="" out_bname="lvds_txclk_DATA" oe_name="" clock_div="1" mode="clkout" serialization="8" reduced_swing="false" load="3"/>
+        </efxpt:lvds>
+    </efxpt:lvds_info>
+    <efxpt:mipi_info/>
+    <efxpt:jtag_info/>
+    <efxpt:ddr_info/>
+</efxpt:design_db>
